@@ -1,0 +1,76 @@
+/* Home.css */
+
+/* Variabel CSS */
+:root {
+  --biru-tua: #0d47a1;
+  --biru-muda: #1976d2;
+  --kuning: #ffd700;
+  --kuning-tua: #ffc107;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  padding-top: 7rem; /* Untuk menghindari tumpang tindih dengan header */
+  background-image: url('https://source.unsplash.com/1600x900/?physics'); /* Ganti dengan gambar Anda */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  min-height: calc(100vh - 70px); /* Tinggi penuh layar dikurangi tinggi header */
+}
+
+.home .content {
+  background-color: rgba(0, 0, 0, 0.6); /* Latar belakang semi-transparan */
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.home .content h3 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.home .content p {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin: 1rem 0;
+  line-height: 1.6;
+  text-align: justify;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--kuning);
+  color: #333;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--kuning-tua);
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home .content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home .content p {
+    font-size: 1rem;
+  }
+}
