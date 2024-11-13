@@ -17,7 +17,7 @@ function App() {
   // Fungsi login
   const login = async (credentials) => {
     try {
-      const response = await axios.post('http://localhost:8000/login', credentials);
+      const response = await axios.post('https://pawm-final-be-production.up.railway.app/login', credentials);
       const { token, userData } = response.data;
       localStorage.setItem('token', token); // Simpan token di localStorage
       setUser(userData);
@@ -31,7 +31,7 @@ function App() {
   // Fungsi register
   const register = async (userData) => {
     try {
-      await axios.post('http://localhost:8000/register', userData);
+      await axios.post('https://pawm-final-be-production.up.railway.app/register', userData);
       alert('Registrasi berhasil. Silakan login.');
     } catch (error) {
       console.error("Registrasi gagal:", error.response?.data?.error);
@@ -52,7 +52,7 @@ function App() {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          const response = await axios.get('http://localhost:8000/userstate', {
+          const response = await axios.get('https://pawm-final-be-production.up.railway.app/userstate', {
             headers: { Authorization: `Bearer ${token}` },
           });
           setUser(response.data);
