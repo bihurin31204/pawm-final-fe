@@ -25,7 +25,7 @@ function Topics() {
       try {
         // Gunakan POST untuk memperbarui lastSimulation
         const userData = { lastSimulation: topicId };
-        await axios.post('http://localhost:8000/userstate', userData, {
+        await axios.post('https://pawm-final-be-production.up.railway.app/userstate', userData, {
           headers: { Authorization: `Bearer ${token}` },
         });
         
